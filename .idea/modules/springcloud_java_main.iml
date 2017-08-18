@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="springcloud_java:main" external.linked.project.path="$CLASS$/YUFEI/work/daishu/springcloud_java" external.root.project.path="$CLASS$/YUFEI/work/daishu/springcloud_java" external.system.id="GRADLE" external.system.module.group="cyf.springcloud" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$CLASS$/YUFEI/work/daishu/springcloud_java/out/production/classes" />
+    <exclude-output />
+    <content url="file://$CLASS$/YUFEI/work/daishu/springcloud_java/src/main">
+      <sourceFolder url="file://$CLASS$/YUFEI/work/daishu/springcloud_java/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$CLASS$/YUFEI/work/daishu/springcloud_java/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
