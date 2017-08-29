@@ -1,0 +1,10 @@
+bootRepackage{
+    mainClass = 'cyf.springcloud.consumer.ConsumerApplication'
+}
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.3.2.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.3.2.RELEASE'
+
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '1.3.4.RELEASE'
+
+}

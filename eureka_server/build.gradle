@@ -1,38 +1,8 @@
-buildscript {
-	ext {
-		springBootVersion = '1.5.6.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+bootRepackage {
+	mainClass = 'cyf.springcloud.eureka_server.EurekaServerApplication'
 }
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-	mavenCentral()
-}
-
-
-ext {
-	springCloudVersion = 'Dalston.SR2'
-}
-
 dependencies {
-	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
 
-dependencyManagement {
-	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-	}
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.7.RELEASE'
+
 }
