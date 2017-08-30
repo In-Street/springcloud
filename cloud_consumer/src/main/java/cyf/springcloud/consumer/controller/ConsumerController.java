@@ -21,6 +21,6 @@ public class ConsumerController {
     @RequestMapping("/oneConsumer")
     public String oneConsumer() {
         System.out.println();
-        return remote.prducerOne();
+        return remote.hello();
     }
 }

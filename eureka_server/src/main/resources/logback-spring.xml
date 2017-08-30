@@ -20,7 +20,7 @@
     <!-- 开发环境 -->
     <springProfile name="peer1,peer2,test">
 
-        <logger name="cyf.gradle.eureka_server" level="debug"/>
+        <logger name="cyf.springcloud.eureka_server" level="debug"/>
         <!--<logger name="org.apache.ibatis.cache" level="info" />-->
         <!--<logger name="org.apache.ibatis.executor" level="debug" />-->
 

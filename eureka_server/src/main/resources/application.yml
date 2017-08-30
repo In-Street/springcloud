@@ -15,7 +15,7 @@ spring.jackson:
   default-property-inclusion: NON_NULL
   time-zone: GMT+8
 
-
+search.enabled: true
 
 eureka:
   instance:
@@ -46,6 +46,7 @@ spring.jackson:
   default-property-inclusion: NON_NULL
   time-zone: GMT+8
 
+search.enabled: true
 
 eureka:
   instance:
@@ -61,4 +62,4 @@ eureka:
 ---
 spring:
   profiles:
-    active: peer1
+    active: peer2

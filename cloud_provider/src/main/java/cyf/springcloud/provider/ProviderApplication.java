@@ -1,18 +1,18 @@
-package cyf.springcloud.eureka_server;
+package cyf.springcloud.provider;
 
 import org.springframework.beans.factory.support.DefaultBeanNameGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@SpringBootApplication
-@EnableEurekaServer
-public class EurekaServerApplication {
+@SpringBootApplication(scanBasePackages = {"cyf.springcloud.provider"})
+@EnableDiscoveryClient
+public class ProviderApplication {
 
 	public static void main(String[] args) {
 
-		new SpringApplicationBuilder(EurekaServerApplication.class)
+		new SpringApplicationBuilder(ProviderApplication.class)
 				//类名重复bean的处理
 				.beanNameGenerator(new DefaultBeanNameGenerator())
 				.run(args);

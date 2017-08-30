@@ -1,8 +1,10 @@
 bootRepackage {
 	mainClass = 'cyf.springcloud.eureka_server.EurekaServerApplication'
 }
-dependencies {
+dependencies{
+	compile group: 'com.alibaba', name: 'fastjson', version: '1.2.23'
+
+	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '1.1.7.RELEASE'
 
 	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.7.RELEASE'
-
 }

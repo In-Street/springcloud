@@ -18,9 +18,9 @@
     
 
     <!-- 开发环境 -->
-    <springProfile name="consumer,test">
+    <springProfile name="provider,test">
 
-        <logger name="cyf.springcloud.consumer" level="debug"/>
+        <logger name="cyf.springcloud.producer" level="debug"/>
         <!--<logger name="org.apache.ibatis.cache" level="info" />-->
         <!--<logger name="org.apache.ibatis.executor" level="debug" />-->
 
