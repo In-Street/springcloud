@@ -2,6 +2,7 @@ package cyf.springcloud.consumer.controller;
 
 import cyf.springcloud.consumer.inter.Remote;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +19,9 @@ public class ConsumerController {
     @Autowired
     Remote remote;
 
-    @RequestMapping("/oneConsumer")
-    public String oneConsumer() {
+    @RequestMapping("/oneConsumer/{name}")
+    public String oneConsumer(@PathVariable(value = "name") String name) {
         System.out.println();
-        return remote.hello();
+        return remote.hello(name);
     }
 }

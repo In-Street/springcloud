@@ -1,5 +1,5 @@
 server:
-  port: 7010
+  port: 7020
   context-path: /
   maxPostSize: 0
 spring:

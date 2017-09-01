@@ -13,9 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/provider")
 public class ProviderController {
 
+    @RequestMapping(value = "/hello/{name}",method = RequestMethod.GET)
+    public String hello(@PathVariable(value = "name") String name){
+        System.out.println();
+        return "this is second provider " + name;
+    }
+
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello(){
         System.out.println();
-        return "this is first provider ";
+        return "this is second provider ";
     }
 }
