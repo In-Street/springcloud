@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 //name:远程服务名，及spring.application.name配置的名称
+//fallback : 熔断器回调类 当请求后端服务出现异常的时候, 可以使用fallback方法返回的值. fallback方法的返回值一般是设置的默认值或者来自缓存.
 @FeignClient(name = "cloud-provider",fallback = RemoteHystrix.class)
 public interface Remote {
 

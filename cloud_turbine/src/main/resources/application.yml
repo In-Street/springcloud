@@ -1,10 +1,10 @@
 server:
-  port: 7000
+  port: 8001
   context-path: /
   maxPostSize: 0
 spring:
-  application.name: cloud-consumer
-  profiles: consumer
+  application.name: cloud-turbine
+  profiles: turbine
 
 #而当我们需要使用CGLIB来实现AOP的时候，需要配置 spring.aop.proxy-target-class=true ，不然默认使用的是标准Java的实现
 spring.aop.proxy-target-class: true
@@ -17,16 +17,23 @@ spring.jackson:
 
 
 
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
+turbine:
+#  app-config: cloud-consumer
+#   clusterNameExpression: new String("default")
+   appConfig: cloud-consumer
 
-#熔断器开关
-feign:
-  hystrix:
-    enabled: true
+   aggregator:
+     clusterNameExpression: new String("default")
+#     clusterConfig: CONSUMER
+
+#  instanceUrlSuffix:  /consumer/hystrix.stream
+
 ---
 spring:
   profiles:
-    active: consumer
+    active: turbine
