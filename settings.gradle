@@ -2,4 +2,6 @@ rootProject.name = 'springcloud_java'
 include 'cloud_consumer'
 include 'cloud_provider'
 include 'cloud_turbine'
+include 'config-server'
+include 'config-client'
 
