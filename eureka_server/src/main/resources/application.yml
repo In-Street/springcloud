@@ -60,6 +60,7 @@ eureka:
       defaultZone: http://peer1:8090/eureka
 
 #---
+# 启动一个 然后更换active 再启动 此方法放弃
 #spring:
 #  profiles:
 #    active: peer2
