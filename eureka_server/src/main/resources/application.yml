@@ -24,7 +24,7 @@ eureka:
 #    register-with-eureka: false
 #    fetch-registry: false
     serviceUrl:
-    #单节点
+    #单节点 注册时需将  register-with-eureka:  fetch-registry 注解打开
 #      defaultZone: http://localhost:${server.port}/eureka
       defaultZone: http://peer2:8091/eureka
 
@@ -59,7 +59,7 @@ eureka:
 #      defaultZone: http://localhost:${server.port}/eureka   单节点
       defaultZone: http://peer1:8090/eureka
 
----
-spring:
-  profiles:
-    active: peer2
+#---
+#spring:
+#  profiles:
+#    active: peer2

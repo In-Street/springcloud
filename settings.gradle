@@ -4,4 +4,5 @@ include 'cloud_provider'
 include 'cloud_turbine'
 include 'config-server'
 include 'config-client'
+include 'eureka_server'
 

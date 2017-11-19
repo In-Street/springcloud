@@ -9,7 +9,7 @@ buildscript {
         maven { url "http://repo1.maven.org/maven2/" }
         maven { url "http://repo.spring.io/release/" }
         maven { url "https://oss.sonatype.org/service/local/staging/deploy/maven2/" }
-
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         jcenter()
     }
     dependencies {
@@ -21,6 +21,7 @@ allprojects {
     group 'cyf.springcloud'
     version '1.0-SNAPSHOT'
 }
+
 
 subprojects {
     apply plugin: "org.springframework.boot"
@@ -44,7 +45,6 @@ subprojects {
 
     dependencyManagement {
         imports {
-//      mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
             mavenBom "org.springframework.boot:spring-boot-starter-parent:${springBootVersion}"
         }
     }
@@ -62,15 +62,8 @@ subprojects {
         testCompileOnly "org.projectlombok:lombok:${lombok}"
         testCompile "org.springframework.boot:spring-boot-starter-test"
 
-
         compile "org.springframework.boot:spring-boot-devtools"
-
-
-
-
 //        compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.3.2.RELEASE'
-
-
     }
 
     compileJava.dependsOn(processResources)
@@ -79,6 +72,6 @@ subprojects {
 //工程依赖配置
 
 task wrapper(type: Wrapper) {
-    gradleVersion = "3.2.1"
+    gradleVersion = "3.5.1"
 }
 
