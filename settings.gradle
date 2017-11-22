@@ -5,4 +5,5 @@ include 'cloud_turbine'
 include 'config-server'
 include 'config-client'
 include 'eureka_server'
-
+include 'hystrix-dashboard'
+include 'cloud_consumer_second'

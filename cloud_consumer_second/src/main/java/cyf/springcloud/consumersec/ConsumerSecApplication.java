@@ -1,4 +1,4 @@
-package cyf.springcloud.consumer;
+package cyf.springcloud.consumersec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,10 +14,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 // Spring Cloud对Feign进行了封装，使其支持了Spring MVC标准注解和HttpMessageConverters。Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
 @EnableFeignClients
 @EnableCircuitBreaker
-public class ConsumerApplication {
+public class ConsumerSecApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(ConsumerApplication.class, args);
+		SpringApplication.run(ConsumerSecApplication.class, args);
 	}
 }
