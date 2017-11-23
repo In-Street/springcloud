@@ -13,6 +13,8 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 // 同时也支持JAX-RS标准的注解。Feign也支持可拔插式的编码器和解码器。
 // Spring Cloud对Feign进行了封装，使其支持了Spring MVC标准注解和HttpMessageConverters。Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
 @EnableFeignClients
+//用于连接 hytrix-dashboard,否则监控时显示Unable to connect to Command Metric Stream.
+//监控之前要访问consumer接口一次，否则monitor 会一直处于loading...
 @EnableCircuitBreaker
 public class ConsumerApplication {
 
