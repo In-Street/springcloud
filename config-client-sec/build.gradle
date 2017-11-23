@@ -1,5 +1,5 @@
 bootRepackage{
-    mainClass = 'cyf.springcloud.configserver.ConfigServerApplication'
+    mainClass = 'cyf.springcloud.configclientsec.ConfigClientSecApplication'
 }
 dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-config', version: '1.2.2.RELEASE'

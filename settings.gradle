@@ -7,3 +7,5 @@ include 'config-client'
 include 'eureka_server'
 include 'hystrix-dashboard'
 include 'cloud_consumer_second'
+include 'config-client-sec'
+
