@@ -1,10 +1,10 @@
 server:
-  port: 7101
+  port: 8888
   context-path: /
   maxPostSize: 0
 spring:
-  application.name: cloud-consumersec
-  profiles: consumersec
+  application.name: cloud-zuul
+  profiles: zuul
 
 #而当我们需要使用CGLIB来实现AOP的时候，需要配置 spring.aop.proxy-target-class=true ，不然默认使用的是标准Java的实现
 spring.aop.proxy-target-class: true
@@ -17,16 +17,13 @@ spring.jackson:
 
 
 
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
 
-#熔断器开关
-feign:
-  hystrix:
-    enabled: true
 ---
 spring:
   profiles:
-    active: consumersec
+    active: zuul

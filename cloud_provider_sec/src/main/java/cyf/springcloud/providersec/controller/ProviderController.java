@@ -1,4 +1,4 @@
-package cyf.springcloud.provider.controller;
+package cyf.springcloud.providersec.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +16,8 @@ public class ProviderController {
     @RequestMapping(value = "/hello/{name}",method = RequestMethod.GET)
     public String hello(@PathVariable(value = "name") String name){
         System.out.println();
-        return "this is first provider " + name;
+        return "this is second provider " + name;
     }
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello(){
-        System.out.println();
-        return "this is second provider ";
-    }
+
 }

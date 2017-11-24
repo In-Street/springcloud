@@ -8,4 +8,6 @@ include 'eureka_server'
 include 'hystrix-dashboard'
 include 'cloud_consumer_second'
 include 'config-client-sec'
+include 'cloud_provider_sec'
+include 'cloud_zuul'
 

@@ -1,0 +1,13 @@
+
+
+  ______              _
+ |___  /             | |
+    / / _   _  _   _ | |
+   / / | | | || | | || |
+  / /__| |_| || |_| || |
+ /_____|\__,_| \__,_||_|
+
+
+
+
+${AnsiColor.GREEN}:: cloud_zuul :: ${application.formatted-version}${AnsiColor.DEFAULT}

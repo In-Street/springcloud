@@ -1,0 +1,6 @@
+bootRepackage{
+    mainClass = ''
+}
+dependencies{
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version: '1.3.2.RELEASE'
+}
