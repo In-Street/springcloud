@@ -9,11 +9,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class ProviderApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		new SpringApplicationBuilder(ProviderApplication.class)
-				//类名重复bean的处理
-				.beanNameGenerator(new DefaultBeanNameGenerator())
-				.run(args);
-	}
+        new SpringApplicationBuilder(ProviderApplication.class)
+                //类名重复bean的处理
+                .beanNameGenerator(new DefaultBeanNameGenerator())
+                .run(args);
+
+    }
 }
