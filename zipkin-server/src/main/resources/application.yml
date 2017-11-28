@@ -5,6 +5,16 @@ server:
 spring:
   application.name: zipkin-server
   profiles: zipkinserver
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+#不加的话存不进数据库
+zipkin:
+  storage:
+      type: mysql
 
 #而当我们需要使用CGLIB来实现AOP的时候，需要配置 spring.aop.proxy-target-class=true ，不然默认使用的是标准Java的实现
 spring.aop.proxy-target-class: true
@@ -13,7 +23,6 @@ spring.jackson:
   date-format: "yyyy-MM-dd HH:mm:ss"
   default-property-inclusion: NON_NULL
   time-zone: GMT+8
-
 
 
 ---
