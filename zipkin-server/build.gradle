@@ -1,0 +1,8 @@
+bootRepackage{
+    mainClass = 'cyf.springcloud.zipkin.ZipkinServerApplication'
+}
+dependencies {
+    compile group: 'io.zipkin.java', name: 'zipkin-server', version: '2.2.1'
+    compile group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version: '2.2.1'
+
+}

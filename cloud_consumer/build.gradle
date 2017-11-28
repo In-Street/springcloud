@@ -9,4 +9,9 @@ dependencies {
 
 //    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-ribbon', version: '1.3.4.RELEASE'
 
+    // zipkin
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '1.2.4.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '1.2.4.RELEASE'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-sleuth-zipkin', version: '1.2.4.RELEASE'
+
 }

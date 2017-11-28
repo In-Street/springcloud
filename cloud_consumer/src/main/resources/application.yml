@@ -5,17 +5,21 @@ server:
 spring:
   application.name: cloud-consumer
   profiles: consumer
+  zipkin:
+    base-url: http://localhost:8880
+  sleuth:
+    enabled: true
+    sampler:
+    #采样率，值为[0,1]之间的任意实数，1 代表100%采集报告。
+      percentage: 1
 
 #而当我们需要使用CGLIB来实现AOP的时候，需要配置 spring.aop.proxy-target-class=true ，不然默认使用的是标准Java的实现
 spring.aop.proxy-target-class: true
-
 #JACKSON
 spring.jackson:
   date-format: "yyyy-MM-dd HH:mm:ss"
   default-property-inclusion: NON_NULL
   time-zone: GMT+8
-
-
 
 eureka:
   client:
