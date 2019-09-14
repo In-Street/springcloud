@@ -71,7 +71,7 @@ subprojects {
 
 //工程依赖配置
 
-task wrapper(type: Wrapper) {
+/*task wrapper(type: Wrapper) {
     gradleVersion = "3.5.1"
-}
+}*/
 
